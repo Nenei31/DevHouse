@@ -1,0 +1,220 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Encabezado y navegación */
+.header-devHouse-Admin {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 85px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-devhouse-Admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.nav-link-devhouse-Admin {
+    color: rgb(16, 15, 15);
+    text-decoration: none;
+    align-items: center;
+    flex: 1;
+}
+
+/* Logo e imagen */
+#logodevhouse-Admin {
+    height: 85px;
+}
+
+.logodevhouse {
+    color:rgb(227, 14, 14);
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación */
+.nav-menu-devhouse-Admin {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    line-height: 85px;
+    cursor: pointer;
+}
+
+.nav-menu-item-devhouse-Admin {
+    font-size: 16px;
+    margin-left: 30px;
+    width: max-content;
+}
+
+.nav-menu-link-devhouse-Admin {
+    transition: color 0.3s linear 0.02s;
+    padding: 10px 15px;
+    border-radius: 5px 20px;
+}
+
+.nav-menu-link-devhouse-Admin:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+
+/* Iconos de navegación */
+.nav-icons-devhouse-Admin {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.nav-icons-devhouse-Admin a {
+    transition: color 0.3s linear 0.05s;
+    color: rgb(212, 231, 212);
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.nav-icons-devhouse-Admin a:hover {
+    color: gold;
+}
+
+/* Botón de menú hamburguesa */
+.nav-toggle-menu {
+    color: rgb(210, 9, 9);
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+    margin-left: 20px;
+}
+
+/* Cambiar barra de navegación a negro */
+::-webkit-scrollbar {
+    background-color: #1e1f22;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1f22;
+}
+
+/* Diseño responsive */
+/*------------------------------------------------pantallas medianas------------------------------------*/
+@media (max-width: 1000px) {
+
+    .nav-menu-devhouse-Admin {
+        flex-direction: column;
+        align-items: center;
+        background-color: darkorange;
+        position: fixed;
+        top: 69px;
+        width: 100%;
+        padding: 0;
+        height: calc(100% - 75px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.4s;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-menu-link-devhouse-Admin:hover,
+    .nav-menu-link_active {
+        background-color: transparent;
+        color: gold;
+    }
+
+    .toggle-custom {
+        display: block;
+    }
+}
+
+/*------------------------------------------------pantallas pequeñas------------------------------------*/
+@media (max-width: 300px) {
+
+    /* CARGAR DEBAJO DEL HEADER */
+    .main-content {
+        margin-top: 0px;
+    }
+
+    .header-devhouse-Admin {
+        height: 75px;
+    }
+
+    .nav-icons-devhouse-Admin {
+        display: none;
+    }
+
+    .nav-toggle-mebu {
+        display: block;
+    }
+
+    .main-content {
+        padding-top: 75px;
+    }
+
+    #logodevhouse-Admin {
+        height: 70px;
+        margin-right: 10px;
+    }
+
+
+    .nav-devhouse-Admin {
+        justify-content: flex-start;
+    }
+
+    .nav-menu-devhouse-Admin {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 0, 0);
+        position: fixed;
+        top: 59px;
+        width: 100%;
+        padding: 0;
+        height: calc(100% - 75px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.4s;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-menu-link-devhouse-Admin:hover,
+    .nav-menu-link_active {
+        background-color: transparent;
+        color: rgb(255, 0, 0);
+    }
+
+    .nav-menu-item-devhouse-Admin {
+        font-size: 15px;
+        margin-left: 10px;
+        width: max-content;
+        line-height: 55px;
+    }
+}

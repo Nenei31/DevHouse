@@ -1,0 +1,337 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+    /* ocultamos carito de compras y modo admin */
+    .carrito {
+        display: none;
+    }
+
+/* CARGAR DEBAJO DEL HEADER */
+.main-content {
+    margin-top: 85px;
+}
+
+/* Encabezado y navegación */
+.header-devhouse {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(130, 209, 236);
+    height: 85px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-devhouse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.nav-link-devhouse {
+    color: rgb(23, 22, 22);
+    text-decoration: none;
+    align-items: center;
+    flex: 1;
+}
+
+/* Logo e imagen */
+#logodevhouse {
+    height: 75px;
+}
+
+.logodevhouse {
+    color:rgb(30, 28, 28);
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación */
+.nav-menu-devhouse {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    line-height: 85px;
+    cursor: pointer;
+}
+
+.nav-menu-item-devhouse {
+    font-size: 16px;
+    margin-left: 60px;
+    width: max-content;
+}
+
+.nav-menu-link-devhouse {
+    transition: color 0.3s linear 0.02s;
+    padding: 10px 15px;
+    border-radius: 5px 20px;
+}
+
+.nav-menu-link-devhouse:hover {
+    background-color:  rgb(130, 209, 236);
+    color: black;
+}
+
+/* Dropdown menu */
+.despegable-header {
+    position: relative;
+    list-style: none;
+}
+
+.contenido-despegable {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color:  rgb(245, 205, 237);
+    min-width: 110px;
+}
+
+.contenido-despegable a {
+    color: rgb(21, 20, 20);
+    padding: 0 0;
+    display: block;
+}
+
+.contenido-despegable a:hover {
+    background-color: transparent;
+    color:  rgb(130, 209, 236);
+}
+
+.despegable-header:hover .contenido-despegable {
+    display: block;
+}
+/* Iconos de navegación */
+.nav-icons-devhouse {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.nav-icons-devhouse > .dropdown-container > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-icons-devhouse a, .nav-icons-devhouse > .dropdown-container > button {
+    transition: color 0.3s linear 0.05s;
+    color: white;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.nav-icons-devhouse a:hover, .nav-icons-devhouse > .dropdown-container > button:hover {
+    color: gold;
+}
+
+/* Botón de menú hamburguesa */
+.nav-toggle-menu {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+    margin-left: 20px;
+}
+
+/* Cambiar barra de navegación a negro */
+::-webkit-scrollbar {
+    background-color: #1e1f22;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1f22;
+}
+
+/* Diseño responsive */
+/*------------------------------------------------pantallas medianas------------------------------------*/
+@media (max-width: 1300px) {
+
+    .nav-menu-devhouse {
+        flex-direction: column;
+        align-items: center;
+        background-color: darkorange;
+        position: fixed;
+        top: 69px;
+        width: 100%;
+        padding: 0;
+        height: calc(100% - 75px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.4s;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-menu-link-devhouse:hover,
+    .nav-menu-link_active {
+        background-color: transparent;
+        color: gold;
+    }
+
+    .toggle-custom {
+        display: block;
+    }
+
+    .carrito {
+        display: block;
+    }
+}
+
+/*------------------------------------------------pantallas pequeñas------------------------------------*/
+@media (max-width: 700px) {
+
+    /* CARGAR DEBAJO DEL HEADER */
+    .main-content {
+        margin-top: 0px;
+    }
+
+    .header-devhouse {
+        height: 75px;
+    }
+
+    .nav-icons-devhouse {
+        display: none;
+    }
+
+    .nav-toggle-menu {
+        display: block;
+    }
+
+    .main-content {
+        padding-top: 75px;
+    }
+
+    #logodevhouse {
+        height: 70px;
+        margin-right: 10px;
+    }
+
+    .logo-devhouse {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .nav-devhouse {
+        justify-content: flex-start;
+    }
+
+    .nav-menu-devhouse {
+        flex-direction: column;
+        align-items: center;
+        background-color:  rgb(130, 209, 236);
+        position: fixed;
+        top: 59px;
+        width: 100%;
+        padding: 0;
+        height: calc(100% - 75px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.4s;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-menu-link-devhouse:hover,
+    .nav-menu-link_active {
+        background-color: transparent;
+        color: rgb(130, 209, 236);
+    }
+
+    .nav-menu-item-devhouse {
+        font-size: 15px;
+        margin-left: 10px;
+        width: max-content;
+        line-height: 55px;
+    }
+
+
+    @media (max-width: 700px) {
+        .carrito {
+            display: block;
+        }
+    }
+}
+
+/* Estilo general del contenedor */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Aparece debajo del botón */
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Ocultamos inicialmente */
+    z-index: 100;
+    width: 200px;
+}
+
+/* Mostrar el menú cuando se hace hover en el contenedor */
+.dropdown-container:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Botón de cerrar sesión */
+.logout-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
+.logout-btn:hover {
+    background-color: #c53030;
+}
+
+/* Animación para el menú desplegable */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

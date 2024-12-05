@@ -1,0 +1,191 @@
+.cuerpo-footer {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #3ce745;
+    color: black;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.footer * {
+    font-family: Arial, Helvetica, sans-serif sans-serif;
+    box-sizing: border-box;
+    border: none;
+}
+
+.footer .fila {
+    padding: 2em 1em;
+}
+
+.footer .fila-primaria {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: stretch;
+    gap: 1em;
+}
+
+.footer .columna {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    min-height: 15em;
+}
+
+.footer h3 {
+    width: 100%;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.footer .lista-enlaces {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .item-enlace:not(:first-child) {
+    margin-top: 0.5em;
+}
+
+.footer .lista-enlaces .item-enlace a {
+    transition: color 0.3s linear 0.05s;
+    color: black;
+    text-decoration: none;
+}
+
+.footer .lista-enlaces .item-enlace a:hover {
+    color: yellow;
+}
+
+.footer .acerca p {
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer input,
+.footer button {
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.footer button {
+    background-color: rgb(13, 255, 0);
+    color: black;
+}
+
+.footer .redes-sociales a {
+    color: black;
+}
+
+.footer .redes-sociales {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5em;
+    flex-direction: row;
+    margin-top: 0.5em;
+    background-color: none !important;
+}
+
+.footer .redes-sociales i {
+    transition: color 0.3s linear 0.05s;
+}
+
+.footer .redes-sociales i:hover {
+    color:black;
+}
+
+.footer .fila-secundaria {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.footer .fila-secundaria i {
+    font-size: 1.8em;
+    color: black;
+}
+
+.footer .fila-secundaria div {
+    transition: background-color 0.2s linear 0.05s;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.footer .fila-secundaria div:hover {
+    background-color: rgb(85, 204, 38);
+}
+
+.footer .fila-derechos {
+    padding: 0.6em 1em;
+    background-color: rgb(39, 168, 39);
+}
+
+.footer .fila-derechos p {
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .footer .fila-primaria {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .fila-secundaria {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    .footer .fila-secundaria div {
+        padding: 0.5em 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 0.8rem;
+    }
+
+    .footer h3 {
+        font-size: 1em;
+    }
+
+    .footer .redes-sociales {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer .redes-sociales a {
+        margin: 5px 0;
+    }
+
+    .footer .fila-secundaria i {
+        font-size: 2em;
+    }
+
+    .footer .fila-secundaria p {
+        font-size: 1em;
+    }
+
+    .footer .fila-derechos p {
+        font-size: 1em;
+    }
+}

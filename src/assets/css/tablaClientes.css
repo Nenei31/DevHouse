@@ -1,0 +1,228 @@
+
+.container {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.text-center {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+
+    padding: 10px 10px 10px 30px; /* Ajuste el relleno para acomodar el ícono */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button {
+    position: absolute;
+    right:-15px;
+    top: 50%;
+    transform: translateY(-90%);
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.search-button i {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.table {
+    width: 80%;
+    max-width: 1130px;
+    border-collapse: separate;
+    margin-bottom: 150px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-agregar{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: darkorange;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.content-btn-Producto{
+    margin-bottom: 20px;
+}
+
+.btn-agregar-producto{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: darkorange;
+    color: white;
+}
+
+.btn-info {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-danger {
+    font-size: 16px;
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-secondary {
+    font-size: 16px;
+    background-color: #6c757d;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .text-center {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .search-bar {
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .search-input {
+        font-size: 14px;
+        padding: 8px 35px 8px 10px;
+    }
+
+    .search-button {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-center {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .search-input {
+        font-size: 12px;
+        padding: 6px 30px 6px 10px;
+    }
+
+    .table td[data-cell]:before {
+        content: attr(data-cell);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+    }
+
+    .table td:last-child {
+        text-align: center;
+    }
+
+
+}

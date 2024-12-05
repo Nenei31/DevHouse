@@ -1,0 +1,140 @@
+.carrito-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.carrito-header {
+    background-color: rgb(228, 24, 24);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.carrito-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.carrito-subtitulo {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.carrito-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    overflow-x: auto;
+}
+
+.carrito-tabla th, .carrito-tabla td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.carrito-tabla th {
+    background-color: #f2f2f2;
+}
+
+.carrito-tabla input[type="number"] {
+    width: 60px;
+    text-align: center;
+}
+
+.carrito-total {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo del botón Pagar Monto */
+.carrito-pagar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carrito-pagar .btn {
+    background-color: #de0e0e;
+    text-decoration: none; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.carrito-pagar .btn:hover {
+    background-color: #e32323; 
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .carrito-tabla th, .carrito-tabla td {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .carrito-tabla input[type="number"] {
+        width: 50px;
+    }
+
+    .carrito-total {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrito-container {
+        margin: 10px;
+    }
+
+    .carrito-tabla {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .carrito-tabla th, .carrito-tabla td {
+        display: block;
+        text-align: left;
+    }
+
+    .carrito-tabla th {
+        background-color: transparent;
+        border: none;
+    }
+
+    .carrito-tabla td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .carrito-tabla td:last-child {
+        border-bottom: none;
+    }
+
+    .carrito-total {
+        font-size: 14px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .carrito-pagar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

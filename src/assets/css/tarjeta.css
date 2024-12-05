@@ -1,0 +1,82 @@
+.credit-card-form-container {
+    background-color: #fff; /* Fondo blanco para un aspecto limpio */
+    padding: 50px; /* Aumentamos el padding para más espacio */
+    border-radius: 20px; /* Bordes más redondeados */
+    max-width: 550px; /* Ampliamos ligeramente el tamaño máximo */
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más definida */
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50; /* Un color gris oscuro más moderno */
+    margin-bottom: 35px; /* Más espacio debajo del título */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+}
+
+.credit-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio más amplio entre los campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px; /* Ajustamos el espacio entre la etiqueta y el input */
+    color: #34495e; /* Color gris intermedio */
+    font-size: 1.2rem; /* Ajuste de tamaño de las etiquetas */
+}
+
+input {
+    padding: 18px; /* Más espacio interno */
+    font-size: 1.2rem;
+    border: 2px solid #ddd; /* Bordes más gruesos */
+    border-radius: 10px; /* Bordes más redondeados */
+    background-color: #f9f9f9; /* Fondo más claro para inputs */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+input:focus {
+    border-color: #3498db; /* Azul claro al enfocar */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.6); /* Sombra azul suave al enfocar */
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Más espacio entre los inputs en la misma fila */
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+span {
+    color: #e74c3c; /* Rojo más moderno para los mensajes de error */
+    font-size: 1rem;
+    margin-top: 8px; /* Ajustamos el espacio */
+}
+
+.submit-btn {
+    background-color: #1abc9c; /* Verde esmeralda moderno */
+    color: white;
+    padding: 18px; /* Aumentamos el padding */
+    font-size: 1.4rem; /* Tamaño de la fuente */
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #16a085; /* Cambia a un verde más oscuro al pasar el mouse */
+}
